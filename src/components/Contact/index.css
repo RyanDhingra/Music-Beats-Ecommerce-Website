@@ -1,0 +1,105 @@
+.contact-section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 80px;
+}
+
+.contact-vid{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+input {
+    color: black;
+}
+
+textarea {
+    color: black;
+}
+
+.form-container {
+    position: relative;
+    top: 0px;
+    width: 60vw;
+    height: 85vh;
+    position: absolute;
+    border-radius: 15px;
+    color: white;
+}
+
+.contact-form {
+    position: relative;
+    top: -50px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    padding: 30px 50px 50px 50px;
+    row-gap: 20px;
+}
+
+.send-button {
+    font-size: large;
+    width: 100px;
+    border-radius: 15px;
+    align-self: center;
+    border: none;
+    color: black;
+    background-color: white;
+    transition: all ease 0.3s;
+}
+
+.send-button:hover {
+    color: white;
+    background-color: #db111f;
+    transition: all ease 0.3s;
+}
+
+.name-input {
+    border-radius: 15px;
+    border: none;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.email-input {
+    border-radius: 15px;
+    border: none;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.message-input {
+    width: 100%;
+    height: 250px;
+    resize: none;
+    border-radius: 15px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.youtube {
+    position: absolute;
+    left: 4%;
+}
+
+.yt-img {
+    height: 200px;
+    width: 200px;
+}
+
+.instagram {
+    position: absolute;
+    right: 5.5%;
+}
+
+.ig-img {
+    height: 150px;
+    width: 150px;
+}

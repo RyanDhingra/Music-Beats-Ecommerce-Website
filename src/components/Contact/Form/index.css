@@ -1,0 +1,6 @@
+.header-text {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    padding: 15px 15px 0px 15px;
+}

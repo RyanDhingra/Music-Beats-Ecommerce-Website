@@ -1,0 +1,22 @@
+.cube-img {
+    width: 400px;
+    height: 400px;
+    transition: opacity 0.5s;
+}
+
+.swiper {
+    position: absolute;
+    left: 150px;
+    top: 25%;
+    width: 400px;
+    height: 400px;
+}
+
+.swiper-slide.swiper-slide-visible.swiper-slide-active:hover img {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.featured-beat-title {
+    color: white;
+}

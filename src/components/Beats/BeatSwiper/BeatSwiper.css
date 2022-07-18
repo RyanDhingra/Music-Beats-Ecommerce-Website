@@ -1,0 +1,59 @@
+.beat-swiper {
+   position: relative;
+   width: 100%;
+   height: 250px;
+}
+
+.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-backface-hidden.mySwiper {
+   background-color: transparent;
+   margin-top: 100px;
+   height: 200px;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   width: 90vw;
+}
+
+.card {
+   margin-left: 1px;
+   height: 200px;
+   width: 200px;
+   border-radius: 500px;
+}
+
+.card:hover {
+   opacity: 0.5;
+}
+
+.swiper-slide.beat-slide {
+   display: flex;
+   flex-direction: row;
+}
+
+.info-text {
+   margin-left: 5px;
+   margin-right: 5px;
+   width: 260px;
+   background-color: red;
+   color: white;
+   padding-left: 5px;
+   padding-right: 5px;
+   border-radius: 15px;
+   overflow: hidden;
+}
+
+.placeholder {
+   height: 200px;
+   width: 200px;
+   visibility: hidden;
+}
+
+.placeholder-text {
+   background: transparent;
+}
+
+h2 {
+   font-size: 0.7cm;
+   margin: 0px;
+   margin-top: 3px;
+}

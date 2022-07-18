@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #db111f 15%, #000 40%);
+    height: 80px;
+    position: fixed;
+    z-index: 99;
+    right: 0px;
+    left: 0px;
+}
+
+.beats-by {
+    position: absolute;
+    top: -17px;
+    left: 15px;
+}
+
+.logo-img {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    width: 160px;
+    height: 40px;
+}
+
+* {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 50px;
+    list-style: none;
+    text-align: center;
+    width: 85vw;
+    justify-content: end;
+    margin-right: 2rem;
+    transition: all 1s ease;
+    font-size: 0.7cm;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    transition: all 0.2s ease;
+}
+
+.nav-links:hover {
+    background-color: #db111f;
+    border-radius: 50px;
+    transition: all 0.2s ease-out;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .nav-items {
+        position: fixed;
+    }
+
+    .nav-menu {
+        background: linear-gradient(90deg, #db111f 15%, #000 40%);
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+        transition: opacity 0.5s ease;
+        z-index: 5;
+    }
+
+    .nav-menu.active {
+        background: linear-gradient(90deg, #db111f 15%, #000 40%);
+        width: 100%;
+        left: 0%;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+        transition: opacity 0.5s ease;
+        z-index: 5;
+    }
+
+    .nav-links {
+        text-align: center;
+        padding: 2rem 0rem;
+        border-radius: 50px;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        background-color: white;
+        border-radius: 50px;
+        transition: all 0.2s ease;
+        color: black;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        top: 25%;
+        left: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 50%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .fa-times {
+        color: #fff;
+        font-size: 3rem;
+    }
+
+    .fa-bars {
+        color: white;
+    }
+
+    .hover-link {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+    }
+
+}

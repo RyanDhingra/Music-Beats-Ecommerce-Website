@@ -1,0 +1,225 @@
+.beats-vid{
+    position: absolute;
+    width: 100%;
+    height: 110vh;
+}
+
+.beats-section {
+    position: relative;
+    top: 80px;
+    height: 110vh;
+}
+
+.beats-display {
+    height: 550px;
+}
+
+.beats-title {
+    position: absolute;
+    margin-left: 60px;
+    background-color: #db111f;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    opacity: 1;
+    transition: opacity 1s;
+    transition-delay: 0.5s;
+}
+
+.beats-title.inactive {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.kits-title {
+    position: absolute;
+    margin-left: 60px;
+    padding: 10px;
+    background-color: #db111f;
+    border-radius: 50px;
+    color: white;
+    opacity: 1;
+    transition: opacity 1s;
+    transition-delay: 0.5s;
+}
+
+.kits-title.inactive {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.beats-slider1 {
+    position: relative;
+    left: 0px;
+    transition: left 1s;
+    transition-delay: 0.5s;
+}
+
+.beats-slider1.inactive {
+    position: relative;
+    left: 100%;
+    transition: left 1s;
+}
+
+.beats-slider2 {
+    position: relative;
+    right: 0px;
+    transition: right 1s;
+    transition-delay: 0.5s;
+}
+
+.beats-slider2.inactive {
+    position: relative;
+    right: 100%;
+    transition: right 1s;
+}
+
+.kits-slider {
+    position: relative;
+    left: 0px;
+    transition: left 1s;
+    transition-delay: 0.5s;
+}
+
+.kits-slider.inactive {
+    position: relative;
+    left: 100%;
+    transition: left 1s;
+}
+
+.view-item {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.view-item.inactive {
+    display: flex;
+}
+
+.view-image {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 100px;
+    justify-content: center;
+    top: 30px;
+    border-radius: 500px;
+    opacity: 1;
+    transition: all 1s;
+    transition-delay: 0.5s;
+}
+
+.view-image.inactive {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+}
+
+.view-title {
+    font-size: 2cm;
+    position: absolute;
+    left: 700px;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.view-title.inactive {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.view-desc {
+    display: flex;
+    position: absolute;
+    left: 700px;
+    top: 150px;
+    background-color: #db111f;
+    color: white;
+    height: 150px;
+    width: 650px;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50px;
+    transition: left 1s;
+    transition-delay: 1s;
+}
+
+.view-desc.inactive {
+    left: 2000px;
+    transition: left 1s;
+}
+
+.play-button {
+    position: absolute;
+    top: 550px;
+    left: 250px;
+    width: 100px;
+    height: 100px;
+    transition: all 1s;
+    transition-delay: 0.5s;
+}
+
+.play-button.inactive {
+    position: absolute;
+    top: 1000px;
+    transition: all 1s;
+}
+
+.stop-button {
+    position: absolute;
+    top: 565px;
+    left: 360px; 
+    width: 70px;
+    height: 70px;
+    transition: all 1s;
+    transition-delay: 0.5s;
+}
+
+.stop-button.inactive {
+    position: absolute;
+    top: 1000px;
+    transition: all 1s;
+}
+
+.back-button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 15px;
+    left: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    transition-delay: 0.5s;
+}
+
+.back-button.inactive {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.arrow {
+    height: 70px;
+    width: 30px;
+}
+
+.add-to-cart {
+    height: 50px;
+    width: 50px;
+}
+
+.add-to-cart.inactive {
+    visibility: hidden;
+}
+
+.cart-button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    left: 700px;
+    top: 500px;
+}

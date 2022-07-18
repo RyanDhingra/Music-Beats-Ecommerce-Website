@@ -1,0 +1,144 @@
+.cart-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-vid {
+    position: relative;
+    top: 76px;
+    width: 100%;
+    height: 100vh;
+}
+
+.item-list.active {
+    position: absolute;
+    color: white;
+    background-color: #db111f;
+    padding: 0px 20px 0px 20px;
+    border-radius: 20px;
+    width: 500px;
+    height: 550px;
+    top: 100px;
+    transition: all 1s;
+    left: 500px;
+    right: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item-list {
+    position: absolute;
+    color: white;
+    background-color: #db111f;
+    padding: 0px 20px 0px 20px;
+    border-radius: 20px;
+    width: 500px;
+    height: 550px;
+    top: 100px;
+    left: 150%;
+    transition: all 1s;
+}
+
+.empty-cart.active {
+    top: 690px;
+    left: 550px;
+    position: absolute;
+    border: none;
+    background-color: #db111f;
+    color: white;
+    padding: 10px;
+    font-size: x-large;
+    border-radius: 40px;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.empty-cart {
+    top: 690px;
+    left: 550px;
+    position: absolute;
+    border: none;
+    background-color: #db111f;
+    color: white;
+    padding: 10px;
+    font-size: x-large;
+    border-radius: 40px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.checkout.active {
+    top: 690px;
+    left: 800px;
+    position: absolute;
+    border: none;
+    background-color: #db111f;
+    color: white;
+    padding: 10px;
+    font-size: x-large;
+    border-radius: 40px;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.checkout {
+    top: 690px;
+    left: 800px;
+    position: absolute;
+    border: none;
+    background-color: #db111f;
+    color: white;
+    padding: 10px;
+    font-size: x-large;
+    border-radius: 40px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.back-to-order.active {
+    top: 690px;
+    left: 670px;
+    position: absolute;
+    border: none;
+    background-color: #db111f;
+    color: white;
+    padding: 10px;
+    font-size: x-large;
+    border-radius: 40px;
+    opacity: 1;
+    transition: opacity 1s;
+    z-index: 100
+}
+
+.back-to-order {
+    top: 690px;
+    left: 670px;
+    position: absolute;
+    border: none;
+    background-color: #db111f;
+    color: white;
+    padding: 10px;
+    font-size: x-large;
+    border-radius: 40px;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: -99;
+}
+
+.remove-item {
+    position: relative;
+    left: 350px;
+    top: -25px;
+}
+
+.item-names {
+    margin: 0px;
+}
+
+.hide {
+    visibility: hidden;
+}

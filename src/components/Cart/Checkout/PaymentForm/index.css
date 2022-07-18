@@ -1,0 +1,25 @@
+.payment-form {
+    left: 500px;
+    position: absolute;
+    background-color: #db111f;
+    transition: left 1s;
+    width: 540px;
+    height: 550px;
+    border-radius: 20px;
+}
+
+.payment-form.active {
+    left: 150%;
+    position: absolute;
+    background-color: #db111f;
+    transition: left 1s;
+    height: 550px;
+    border-radius: 50px;
+}
+
+.info-form {
+    width: 30vw;
+    min-width: 500px;
+    border-radius: 7px;
+    padding: 20px;
+}
