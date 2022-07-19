@@ -5,7 +5,7 @@ import './index.css'
 
 const PaymentForm = ({ clicked, checkoutToken, onCaptureCheckout }) => {
     const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
-
+    console.log(checkoutToken)
     const handleSubmit = async (event, elements, stripe) => {
         event.preventDefault();
 
@@ -18,34 +18,41 @@ const PaymentForm = ({ clicked, checkoutToken, onCaptureCheckout }) => {
         if (error) {
             console.log(error);
         } else {
-            const orderData = {
-                line_items: checkoutToken.live.line_items,
-                customer: { firstname: event.target.firstname.value, lastname: event.target.lastname.value, email: event.target.email.value },
-                shipping: { 
-                    name: 'Free', 
-                    street: event.target.billing_address.value, 
-                    town_city: event.target.city.value, 
-                    county_state: 'ON', 
-                    postal_zip_code: event.target.post_zip.value, 
-                    country: 'CA'
-                },
-                fulfillment: { shipping_method: checkoutToken.shipping.available_options[0].id},
-                billing: {
-                  name: event.target.firstname.value + " " + event.target.lastname.value,
-                  street: event.target.billing_address.value,
-                  town_city: event.target.city.value,
-                  county_state: event.target.prov_state.value,
-                  country: event.target.country.value,
-                  postal_zip_code: event.target.post_zip.value
-                },
-                payment: {
-                  gateway: 'stripe',
-                  stripe: {
-                    payment_method_id: paymentMethod.id
-                  }
-                }
-              };
-            onCaptureCheckout(checkoutToken.id, orderData);
+            if (checkoutToken.live.line_items.length === 0) {
+                alert('Your cart is empty.')
+            } else {
+                const orderData = {
+                    line_items: checkoutToken.live.line_items,
+                    customer: { firstname: event.target.firstname.value, lastname: event.target.lastname.value, email: event.target.email.value },
+                    shipping: { 
+                        name: 'Free', 
+                        street: event.target.billing_address.value, 
+                        town_city: event.target.city.value, 
+                        county_state: 'ON', 
+                        postal_zip_code: event.target.post_zip.value, 
+                        country: 'CA'
+                    },
+                    fulfillment: { shipping_method: checkoutToken.shipping.available_options[0].id},
+                    billing: {
+                    name: event.target.firstname.value + " " + event.target.lastname.value,
+                    street: event.target.billing_address.value,
+                    town_city: event.target.city.value,
+                    county_state: event.target.prov_state.value,
+                    country: event.target.country.value,
+                    postal_zip_code: event.target.post_zip.value
+                    },
+                    payment: {
+                    gateway: 'stripe',
+                    stripe: {
+                        payment_method_id: paymentMethod.id
+                    }
+                    }
+                };
+                onCaptureCheckout(checkoutToken.id, orderData);
+                alert('Purchase succesful, time to drop some bangers!')
+                event.target.reset()
+                cardElement.clear()
+            }
         }
     }
     

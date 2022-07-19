@@ -217,9 +217,15 @@
 }
 
 .cart-button {
-    position: absolute;
+    position: relative;
     background-color: transparent;
     border: none;
     left: 700px;
     top: 500px;
+    color: white;
+    padding: 10px;
+    background-color: #db111f;
+    margin-right: 55px;
+    border-radius: 15px;
+    font-size: medium;
 }

@@ -39,7 +39,7 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
         }
         setReturnData(!returnData);
     }
-
+    console.log(currBeat)
     return (
         <div className="beats-section" id="browse">
             <video className="beats-vid" src={beatsBG} autoPlay loop muted/>
@@ -67,12 +67,18 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
                 <button onClick={event => goBack(event)} className={returnData ? "back-button": "back-button inactive"}>
                     <img className={returnData ? "arrow": "arrow inactive"} src={backButton} alt="Go Back"/>
                 </button>
-                <button onClick={returnData ? () => onAddToCart(currBeat.id):null} className={returnData ? "cart-button": "cart-button inactive"}>
-                    <img className={returnData ? "add-to-cart": "add-to-cart inactive"} src={plus} alt="Go Back"/>
-                </button>
+                <div className={returnData ? "variants": "variants inactive"}>
+                    {currBeat?.variant_groups[0].options.map((variant) => (
+                        <button onClick={returnData ? () => onAddToCart(currBeat.id, currBeat.variant_groups[0].id, variant.id):null} className={returnData ? "cart-button": "cart-button inactive"}>
+                            {variant.name}
+                        </button>
+                    ))}
+                </div>
             </div>
         </div>
     )
 }
 
-//so we'll make all the components and 1 will be visible at a time, then do transitions based on the value of return data being true of false, and we render the view item, we create a coimponent that takes of prop of the item to render and renders accordingly, so curr product type system, then implementing a back button simple swaps boolean of return data to return original classes which would be the swipers
+/*<button onClick={returnData ? () => onAddToCart(currBeat.id):null} className={returnData ? "cart-button": "cart-button inactive"}>
+    Button
+</button>*/

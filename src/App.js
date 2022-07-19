@@ -22,18 +22,20 @@ function App() {
     setProducts(data);
   }
 
-  const handleAddToCart = async (productID) => {
+  const handleAddToCart = async (productID, variant_groupID, variantID) => {
     let duplicate = false;
-    
     for (let x = 0; x < cart.line_items.length; x++) {
       if (cart.line_items[x].product_id === productID) {
         duplicate = true;
         alert("Item is already in your cart.");
       }
     }
+    let option = {}
+    option[variant_groupID] = variantID
+    console.log(option)
 
     if (!duplicate) {
-      const item = await commerce.cart.add(productID)
+      const item = await commerce.cart.add(productID, 1, option)
       setCart(item.cart)
     }
   }
@@ -50,6 +52,7 @@ function App() {
 
   const handleEmptyCart = async () => {
     const { cart } = await commerce.cart.empty();
+    console.log(cart.id)
     setCart(cart);
   }
 
