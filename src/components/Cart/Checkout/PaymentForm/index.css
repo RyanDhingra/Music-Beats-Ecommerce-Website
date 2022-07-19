@@ -6,6 +6,7 @@
     width: 540px;
     height: 550px;
     border-radius: 20px;
+    z-index: 10;
 }
 
 .payment-form.active {
@@ -15,6 +16,7 @@
     transition: left 1s;
     height: 550px;
     border-radius: 50px;
+    z-index: 10;
 }
 
 .info-form {

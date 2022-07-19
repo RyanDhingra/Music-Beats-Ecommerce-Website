@@ -28,6 +28,7 @@
     right: 500px;
     margin-left: auto;
     margin-right: auto;
+    z-index: 10;
 }
 
 .item-list {
@@ -41,6 +42,7 @@
     top: 100px;
     left: 150%;
     transition: all 1s;
+    z-index: 10;
 }
 
 .empty-cart.active {
@@ -141,4 +143,18 @@
 
 .hide {
     visibility: hidden;
+}
+
+.stripe-img {
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    left: 1.5%;
+}
+
+.secure-img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 9%;
 }

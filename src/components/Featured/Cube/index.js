@@ -49,15 +49,15 @@ export default function Cube({featuredBeats}) {
         </SwiperSlide>
         <SwiperSlide>
           <img className="cube-img" onMouseEnter={event => playSound(event, new Howl({src: [featuredBeats[1].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} src={featuredBeats[1] ? featuredBeats[1].image.url:'https://glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png'} alt="Track 2" />
-          <h1 className="featured-beat-title">{featuredBeats[1] ? featuredBeats[0].name:"Beat 2"}</h1>
+          <h1 className="featured-beat-title">{featuredBeats[1] ? featuredBeats[1].name:"Beat 2"}</h1>
         </SwiperSlide>
         <SwiperSlide>
           <img className="cube-img" onMouseEnter={event => playSound(event, new Howl({src: [featuredBeats[2].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} src={featuredBeats[2] ? featuredBeats[2].image.url:'https://glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png'} alt="Track 3" />
-          <h1 className="featured-beat-title">{featuredBeats[2] ? featuredBeats[0].name:"Beat 3"}</h1>
+          <h1 className="featured-beat-title">{featuredBeats[2] ? featuredBeats[2].name:"Beat 3"}</h1>
         </SwiperSlide>
         <SwiperSlide>
           <img className="cube-img" onMouseEnter={event => playSound(event, new Howl({src: [featuredBeats[3].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} src={featuredBeats[3] ? featuredBeats[3].image.url:'https://glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png'} alt="Track 4" />
-          <h1 className="featured-beat-title">{featuredBeats[3] ? featuredBeats[0].name:"Beat 4"}</h1>
+          <h1 className="featured-beat-title">{featuredBeats[3] ? featuredBeats[3].name:"Beat 4"}</h1>
         </SwiperSlide>
       </Swiper>
     </>

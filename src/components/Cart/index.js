@@ -28,6 +28,8 @@ const Cart = ({ currCart, handleRemoveFromCart, handleEmptyCart, order, onCaptur
             <button className={clicked ? "checkout":"checkout active"} onClick={handleClick} disabled={clicked}>Checkout</button>
             <button className={clicked ? "back-to-order active":"back-to-order"} onClick={handleClick} disabled={!clicked}>Back to Order</button>
             <Checkout clicked={clicked} cart={currCart} order={order} onCaptureCheckout={onCaptureCheckout} error={error}/>
+            <img className="stripe-img" src="https://www.logo.wine/a/logo/Stripe_(company)/Stripe_(company)-Powered-by-Stripe-Logo.wine.svg" alt="Powered by Stripe"/>
+            <img className="secure-img" src="https://icons-for-free.com/download-icon-secure+security+shield+icon-1320196720831486004_512.png" alt="Secure Payments"/>
         </div>
     )
 }

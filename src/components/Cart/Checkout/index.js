@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import './index.css'
 import { commerce } from '../../../lib/index.js';
 import PaymentForm from './PaymentForm/index.js'
 

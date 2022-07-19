@@ -42,6 +42,7 @@ function App() {
 
   const fetchCart = async () => {
     const cart = await commerce.cart.retrieve()
+    console.log(cart)
     setCart(cart);
   }
 
@@ -66,6 +67,7 @@ function App() {
       const incomingOrder = await commerce.checkout.capture(checkoutTokenID, newOrder)
       setOrder(incomingOrder);
       refreshCart();
+      handleEmptyCart();
     } catch (error) {
       setErrMsg(error.data.error.message);
     }
