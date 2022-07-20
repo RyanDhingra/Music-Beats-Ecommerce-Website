@@ -50,6 +50,7 @@ function App() {
   const handleRemoveFromCart = async (productID) => {
     const { cart } = await commerce.cart.remove(productID);
     setCart(cart);
+    alert("Item successfully removed from cart.")
   }
 
   const handleEmptyCart = async () => {

@@ -70,7 +70,7 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
                 <div className={returnData ? "variants": "variants inactive"}>
                     {currBeat?.variant_groups[0].options.map((variant) => (
                         <button onClick={returnData ? () => onAddToCart(currBeat.id, currBeat.variant_groups[0].id, variant.id):null} className={returnData ? "cart-button": "cart-button inactive"}>
-                            {variant.name}
+                            {variant.name} <br/> {variant.price.formatted_with_symbol}
                         </button>
                     ))}
                 </div>
