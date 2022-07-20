@@ -15,13 +15,177 @@
     background-color: #db111f;
     transition: left 1s;
     height: 550px;
-    border-radius: 50px;
+    border-radius: 20px;
     z-index: 10;
 }
 
 .info-form {
+    position: relative;
+    top: 30px;
     width: 30vw;
     min-width: 500px;
     border-radius: 7px;
     padding: 20px;
+}
+
+.firstname {
+    display: flex;
+    position: relative;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    width: 200px;
+    right: 0px;
+    left: -120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lastname {
+    display: flex;
+    position: relative;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    width: 200px;
+    left: 120px;
+    right: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    top: -27px;
+}
+
+.billing-address {
+    position: relative;
+    display: flex;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    width: 443px;
+    left: 0px;
+    right: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.city {
+    position: relative;
+    display: flex;
+    position: relative;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    width: 200px;
+    right: 0px;
+    left: -120px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30px;
+}
+
+.prov-state {
+    display: flex;
+    position: relative;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    width: 200px;
+    left: 120px;
+    right: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    top: 3px;
+}
+
+.country {
+    position: relative;
+    display: flex;
+    position: relative;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    width: 200px;
+    right: 0px;
+    left: -120px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30px;
+}
+
+.post-zip {
+    display: flex;
+    position: relative;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    width: 200px;
+    left: 120px;
+    right: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    top: 3px;
+}   
+
+.number {
+    position: relative;
+    display: flex;
+    position: relative;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    width: 200px;
+    right: 0px;
+    left: -120px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30px;
+}
+
+.email {
+    position: relative;
+    display: flex;
+    position: relative;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    width: 200px;
+    right: 0px;
+    left: -120px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 60px;
+    margin-bottom: 50px;
+}
+
+.submit {
+    position: relative;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+.payment-title {
+    position: relative;
+    left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    top: 15px;
+    color: white;
+}
+
+.card-elem {
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    border-radius: 25px;
+    width: 440px;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
 }

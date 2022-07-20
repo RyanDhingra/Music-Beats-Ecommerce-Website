@@ -58,23 +58,26 @@ const PaymentForm = ({ clicked, checkoutToken, onCaptureCheckout }) => {
     
     return (     
         <div className={clicked ? "payment-form":"payment-form active"}>
+            <h1 className="payment-title">Payment Info</h1>
             <Elements stripe={stripePromise}>
                 <ElementsConsumer>{({ elements, stripe }) => (
                 <form className="info-form" onSubmit={(e) => handleSubmit(e, elements, stripe)}>
-                    <input name="firstname" placeholder="First Name"/>
-                    <input name="lastname" placeholder="Last Name"/>
-                    <input name="billing_address" placeholder="Address Line"/>
-                    <input name="city" placeholder="City"/>
-                    <input name="prov_state" placeholder="Province/State"/>
-                    <input name="country" placeholder="Country"/>
-                    <input name="post_zip" placeholder="Postal Code/Zip Code"/>
-                    <input name="number" placeholder="Telephone Number"/>
-                    <input name="email" placeholder="Email Address"/>
+                    <input className="firstname" name="firstname" placeholder="First Name"/>
+                    <input className="lastname" name="lastname" placeholder="Last Name"/>
+                    <input className="billing-address" name="billing_address" placeholder="Address Line"/>
+                    <input className="city" name="city" placeholder="City"/>
+                    <input className="prov-state" name="prov_state" placeholder="Province/State"/>
+                    <input className="country" name="country" placeholder="Country"/>
+                    <input className="post-zip" name="post_zip" placeholder="Postal Code/Zip Code"/>
+                    <input className="number" name="number" placeholder="Telephone Number"/>
+                    <input className="email" name="email" placeholder="Email Address"/>
                     <br/> <br/>
-                    <CardElement options={{hidePostalCode: true}}/>
+                    <div className="card-elem">
+                        <CardElement options={{hidePostalCode: true}}/>
+                    </div>
                     <br /> <br />
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <button type="submit" variant="contained" disabled={!stripe}>
+                    <button className="submit" type="submit" variant="contained" disabled={!stripe}>
                         {checkoutToken? "Pay " + checkoutToken.live.subtotal.formatted_with_symbol:"Pay $0.00"}
                     </button>
                     </div>
