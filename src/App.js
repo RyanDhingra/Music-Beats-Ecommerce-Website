@@ -37,6 +37,7 @@ function App() {
     if (!duplicate) {
       const item = await commerce.cart.add(productID, 1, option)
       setCart(item.cart)
+      alert("Item successfully added to cart.")
     }
   }
 

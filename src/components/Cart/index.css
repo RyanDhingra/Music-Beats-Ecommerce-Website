@@ -57,6 +57,7 @@
     border-radius: 40px;
     opacity: 1;
     transition: opacity 1s;
+    z-index: 99;
 }
 
 .empty-cart {
@@ -71,6 +72,7 @@
     border-radius: 40px;
     opacity: 0;
     transition: opacity 1s;
+    z-index: 98;
 }
 
 .checkout.active {
@@ -85,6 +87,7 @@
     border-radius: 40px;
     opacity: 1;
     transition: opacity 1s;
+    z-index: 99;
 }
 
 .checkout {
@@ -99,6 +102,7 @@
     border-radius: 40px;
     opacity: 0;
     transition: opacity 1s;
+    z-index: 98;
 }
 
 .back-to-order.active {
@@ -113,7 +117,7 @@
     border-radius: 40px;
     opacity: 1;
     transition: opacity 1s;
-    z-index: 100
+    z-index: 99;
 }
 
 .back-to-order {
@@ -128,7 +132,7 @@
     border-radius: 40px;
     opacity: 0;
     transition: opacity 1s;
-    z-index: -99;
+    z-index: 98;
 }
 
 .remove-item {
