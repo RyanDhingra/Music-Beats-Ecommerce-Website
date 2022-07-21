@@ -3,9 +3,9 @@ import { Elements, CardElement, ElementsConsumer } from '@stripe/react-stripe-js
 import { loadStripe } from '@stripe/stripe-js';
 import './index.css'
 
-const PaymentForm = ({ clicked, checkoutToken, onCaptureCheckout }) => {
+const PaymentForm = ({ clicked, checkoutToken, onCaptureCheckout, cart }) => {
     const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
-    console.log(checkoutToken)
+    
     const handleSubmit = async (event, elements, stripe) => {
         event.preventDefault();
 
@@ -52,10 +52,11 @@ const PaymentForm = ({ clicked, checkoutToken, onCaptureCheckout }) => {
                 alert('Purchase succesful, time to drop some bangers!')
                 event.target.reset()
                 cardElement.clear()
+                checkoutToken.live.line_items.clear()
+                console.log(checkoutToken)
             }
         }
     }
-    
     return (     
         <div className={clicked ? "payment-form":"payment-form active"}>
             <h1 className="payment-title">Payment Info</h1>
@@ -78,7 +79,7 @@ const PaymentForm = ({ clicked, checkoutToken, onCaptureCheckout }) => {
                     <br /> <br />
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <button className="submit" type="submit" variant="contained" disabled={!stripe}>
-                        {checkoutToken? "Pay " + checkoutToken.live.subtotal.formatted_with_symbol:"Pay $0.00"}
+                        {checkoutToken? "Pay " + cart.subtotal.formatted_with_symbol:"Pay $0.00"}
                     </button>
                     </div>
                 </form>

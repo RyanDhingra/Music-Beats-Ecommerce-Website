@@ -16,9 +16,10 @@ const Checkout = ({ clicked, cart, order, onCaptureCheckout, error }) => {
         }
         generateCheckoutToken();
     }, [cart]);
+    console.log(cart)
 
     return (
-            <PaymentForm clicked={clicked} checkoutToken={checkoutToken} onCaptureCheckout={onCaptureCheckout}/>
+            <PaymentForm clicked={clicked} checkoutToken={checkoutToken} onCaptureCheckout={onCaptureCheckout} cart={cart}/>
     )
 }
 

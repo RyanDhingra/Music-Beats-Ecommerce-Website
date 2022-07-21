@@ -32,7 +32,6 @@ function App() {
     }
     let option = {}
     option[variant_groupID] = variantID
-    console.log(option)
 
     if (!duplicate) {
       const item = await commerce.cart.add(productID, 1, option)
@@ -43,7 +42,6 @@ function App() {
 
   const fetchCart = async () => {
     const cart = await commerce.cart.retrieve()
-    console.log(cart)
     setCart(cart);
   }
 
@@ -55,7 +53,7 @@ function App() {
 
   const handleEmptyCart = async () => {
     const { cart } = await commerce.cart.empty();
-    console.log(cart.id)
+    alert("Cart has been emptied successfully.")
     setCart(cart);
   }
 
@@ -69,7 +67,7 @@ function App() {
       const incomingOrder = await commerce.checkout.capture(checkoutTokenID, newOrder)
       setOrder(incomingOrder);
       refreshCart();
-      handleEmptyCart();
+      alert("Order completed! Check your email for a confirmation letter.")
     } catch (error) {
       setErrMsg(error.data.error.message);
     }

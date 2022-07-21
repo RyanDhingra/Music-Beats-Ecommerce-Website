@@ -5,7 +5,6 @@ import BeatSwiper from "./BeatSwiper/index.js"
 import { Howl, Howler } from "howler";
 import stop from '../../assets/stop.png'
 import backButton from '../../assets/backButton.png'
-import plus from '../../assets/plusIcon.png'
 import TypeAnimation from "react-type-animation";
 
 export default function Beats({ beats1, beats2, kits, onAddToCart }) { 
@@ -39,7 +38,7 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
         }
         setReturnData(!returnData);
     }
-    console.log(currBeat)
+
     return (
         <div className="beats-section" id="browse">
             <video className="beats-vid" src={beatsBG} autoPlay loop muted/>

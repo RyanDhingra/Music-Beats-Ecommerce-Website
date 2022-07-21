@@ -22,7 +22,7 @@ export default function Cube({featuredBeats}) {
       curr_sound.unload();
     }
   }  
-  console.log(featuredBeats[0])
+
   return (
     <>
       <Swiper
