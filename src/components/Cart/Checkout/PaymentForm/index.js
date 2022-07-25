@@ -42,7 +42,7 @@ const PaymentForm = ({ clicked, checkoutToken, onCaptureCheckout, cart }) => {
                     postal_zip_code: event.target.post_zip.value
                     },
                     payment: {
-                    gateway: 'stripe',
+                    gateway: 'Stripe',
                     stripe: {
                         payment_method_id: paymentMethod.id
                     }
