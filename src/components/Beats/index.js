@@ -40,6 +40,13 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
     }
     console.log(currBeat)
 
+    const prices = {
+        Exclusive: "$300",
+        "Lease MP3": "$25",
+        "Lease WAV": "$65",
+        "Unlimited Lease": "$80"
+    }
+
     return (
         <div className="beats-section" id="browse">
             <video className="beats-vid" src={beatsBG} autoPlay loop muted/>
@@ -70,7 +77,7 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
                 <div className={returnData ? "variants": "variants inactive"}>
                     {currBeat?.variant_groups[0].options.map((variant) => (
                         <button onClick={returnData ? () => onAddToCart(currBeat.id, currBeat.variant_groups[0].id, variant.id):null} className={returnData ? "cart-button": "cart-button inactive"}>
-                            {variant.name} <br/> {variant.price.formatted_with_symbol}
+                            {variant.name} <br/> {prices[variant.name]}
                         </button>
                     ))}
                 </div>
