@@ -17,7 +17,7 @@
 .item-list.active {
     position: absolute;
     color: white;
-    background-color: #db111f;
+    background-color: rgba(219, 17, 31, 0.3);
     padding: 0px 20px 0px 20px;
     border-radius: 20px;
     width: 500px;
@@ -34,7 +34,7 @@
 .item-list {
     position: absolute;
     color: white;
-    background-color: #db111f;
+    background-color: rgba(219, 17, 31, 0.3);
     padding: 0px 20px 0px 20px;
     border-radius: 20px;
     width: 500px;
@@ -50,7 +50,7 @@
     left: 550px;
     position: absolute;
     border: none;
-    background-color: #db111f;
+    background-color: rgba(219, 17, 31, 0.3);
     color: white;
     padding: 10px;
     font-size: x-large;
@@ -65,7 +65,7 @@
     left: 550px;
     position: absolute;
     border: none;
-    background-color: #db111f;
+    background-color: rgba(219, 17, 31, 0.3);
     color: white;
     padding: 10px;
     font-size: x-large;
@@ -80,7 +80,7 @@
     left: 800px;
     position: absolute;
     border: none;
-    background-color: #db111f;
+    background-color: rgba(219, 17, 31, 0.3);
     color: white;
     padding: 10px;
     font-size: x-large;
@@ -95,7 +95,7 @@
     left: 800px;
     position: absolute;
     border: none;
-    background-color: #db111f;
+    background-color: rgba(219, 17, 31, 0.3);
     color: white;
     padding: 10px;
     font-size: x-large;
@@ -110,7 +110,7 @@
     left: 670px;
     position: absolute;
     border: none;
-    background-color: #db111f;
+    background-color: rgba(219, 17, 31, 0.3);
     color: white;
     padding: 10px;
     font-size: x-large;
@@ -125,7 +125,7 @@
     left: 670px;
     position: absolute;
     border: none;
-    background-color: #db111f;
+    background-color: rgba(219, 17, 31, 0.3);
     color: white;
     padding: 10px;
     font-size: x-large;

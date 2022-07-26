@@ -17,25 +17,24 @@ video {
 
 .featured-title {
     position: absolute;
-    top: 250px;
+    top: 300px;
     left: 100px;
     right: 0px;
     margin-left: auto;
     margin-right: auto;
     align-self: center;
     padding: 20px;
-    background-color: #db111f;
     border-radius: 50px;
     color: white;
     max-width: 300px;
     text-align: center;
+    font-size: xx-large;
 }
 
 .featured-text {
     top: 450px;
     position: absolute;
     padding: 20px;
-    background-color: #db111f;
     color: white;
     border-radius: 50px;
     text-align: center;

@@ -1,7 +1,7 @@
 .payment-form {
     left: 500px;
     position: absolute;
-    background-color: #db111f;
+    background-color: rgba(219, 17, 31, 0.3);
     transition: left 1s;
     width: 540px;
     height: 550px;
@@ -12,7 +12,7 @@
 .payment-form.active {
     left: 150%;
     position: absolute;
-    background-color: #db111f;
+    background-color: rgba(219, 17, 31, 0.3);
     transition: left 1s;
     height: 550px;
     border-radius: 20px;

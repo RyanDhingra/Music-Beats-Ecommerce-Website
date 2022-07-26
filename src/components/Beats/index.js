@@ -38,6 +38,7 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
         }
         setReturnData(!returnData);
     }
+    console.log(currBeat)
 
     return (
         <div className="beats-section" id="browse">
