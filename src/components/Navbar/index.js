@@ -16,9 +16,6 @@ class Navbar extends Component {
             <nav className="nav-items">
                 <img className="logo-img" src={Logo} alt="Yunginz"/>
                 <h5 className="beats-by">BEATS BY</h5>
-                <div className="menu-icon" onClick={this.handleClick}>
-                    <i className={this.state.clicked ? "fas fa-times fa-xl" : "fas fa-bars fa-xl"}></i>
-                </div>
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     {MenuItems.map((item, index) => {
                         return (

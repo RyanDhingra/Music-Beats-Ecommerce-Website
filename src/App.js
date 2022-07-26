@@ -67,7 +67,7 @@ function App() {
       const incomingOrder = await commerce.checkout.capture(checkoutTokenID, newOrder)
       setOrder(incomingOrder);
       refreshCart();
-      alert("Order completed! Check your email for a confirmation letter.")
+      alert("Purchase successful! Please check your email for a confirmation letter. Your beat(s) and contract will be sent within 24 hours. Thanks!")
     } catch (error) {
       setErrMsg(error.data.error.message);
     }

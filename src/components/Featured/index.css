@@ -44,3 +44,54 @@ video {
     margin-right: auto;
     max-width: 300px;
 }
+
+.top-label {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 82%;
+    top: 15%;
+    color: white;
+    align-items: center;
+}
+
+.mid-label {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 82%;
+    top: 40%;
+    color: white;
+    align-items: center;
+}
+
+.bot-label {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 82%;
+    top: 67%;
+    color: white;
+    align-items: center;
+}
+
+.top-label-image {
+    margin-top: 20px;
+    height: 70px;
+    width: 70px;
+}
+
+.mid-label-image {
+    margin-top: 20px;
+    height: 100px;
+    width: 75px;
+}
+
+.bot-label-image {
+    margin-top: 20px;
+    height: 80px;
+    width: 80px;
+}

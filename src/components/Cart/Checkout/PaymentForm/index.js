@@ -49,7 +49,6 @@ const PaymentForm = ({ clicked, checkoutToken, onCaptureCheckout, cart }) => {
                     }
                 };
                 onCaptureCheckout(checkoutToken.id, orderData);
-                alert('Purchase succesful, time to drop some bangers!')
                 event.target.reset()
                 cardElement.clear()
                 checkoutToken.live.line_items.clear()
