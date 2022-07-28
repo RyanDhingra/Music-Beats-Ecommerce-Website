@@ -6,6 +6,7 @@ import { Howl, Howler } from "howler";
 import stop from '../../assets/stop.png'
 import backButton from '../../assets/backButton.png'
 import TypeAnimation from "react-type-animation";
+import skip from '../../assets/skip.png'
 
 export default function Beats({ beats1, beats2, kits, onAddToCart }) { 
     const [returnData, setReturnData] = useState(false);
@@ -17,10 +18,18 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
       sound.stop();
       sound.unload();
       Howler.volume(1.0);
-      sound.play();
+      sound.play()
+    }
+
+    const seekSound = () => {
+        sound.pause()
+        let currTime = sound.seek()
+        sound.stop()
+        sound.unload()
+        sound.seek([currTime + 10], [sound.play()])
     }
   
-    const stopSound = (event) => {
+    const stopSound = () => {
       sound.stop();
       sound.unload();
     }  
@@ -69,6 +78,7 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
                 <img className={returnData ? "view-image": "view-image inactive"} src={image} alt="Sound Cover"/>
                 <img className={returnData ? "play-button": "play-button inactive"} src='https://icon-library.com/images/video-play-icon-transparent/video-play-icon-transparent-5.jpg' alt="Play" onClick={returnData ? () => playSound(): null}/>
                 <img className={returnData ? "stop-button": "stop-button inactive"} src={stop} alt="Stop" onClick={returnData ? () => stopSound(): null}/>
+                <img className={returnData ? "seek-button": "seek-button inactive"} src={skip} alt="Seek" onClick={returnData ? () => seekSound(): null}/>
                 <TypeAnimation cursor={false} sequence={[1500, returnData ? currBeat.name:""]} className={returnData ? "view-title": "view-title inactive"}/>
                 <p className={returnData ? "view-desc": "view-desc inactive"} dangerouslySetInnerHTML={{ __html: returnData ? currBeat.description:""}} />
                 <button onClick={event => goBack(event)} className={returnData ? "back-button": "back-button inactive"}>
@@ -85,7 +95,3 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
         </div>
     )
 }
-
-/*<button onClick={returnData ? () => onAddToCart(currBeat.id):null} className={returnData ? "cart-button": "cart-button inactive"}>
-    Button
-</button>*/
