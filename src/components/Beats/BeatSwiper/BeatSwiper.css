@@ -19,10 +19,13 @@
    height: 200px;
    width: 200px;
    border-radius: 500px;
+   transition: opacity 0.5s;
+   display: flexbox;
 }
 
 .card:hover {
    opacity: 0.5;
+   transition: opacity 0.5s;
 }
 
 .swiper-slide.beat-slide {
@@ -56,4 +59,22 @@ h2 {
    font-size: 0.7cm;
    margin: 0px;
    margin-top: 3px;
+}
+
+.click-to-view {
+   position: absolute;
+   top: 75px;
+   left: 5px;
+   color: white;
+   opacity: 0;
+   transition: opacity 0.5s;
+}
+
+.card:hover + .click-to-view {
+   opacity: 1;
+   transition: opacity 0.5s;
+}
+
+.no-hover {
+   pointer-events: none;
 }

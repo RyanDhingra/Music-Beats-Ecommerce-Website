@@ -79,16 +79,19 @@ export default function BeatSwiper({prod_list, viewBeat}) {
             groupedProds.map((slide) => (
               <SwiperSlide className="beat-slide">
                 <img onClick={event => beatClicked(event, slide[0])} onMouseEnter={event => playSound(event, new Howl({src: [slide[0].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} className={slide[0].showItem ? 'placeholder': 'card'} src={slide[0].image.url} alt="card"/>
+                <h2 className="click-to-view no-hover">Click to View</h2>
                 <div className={slide[0].showItem ? 'placeholder-text': 'info-text'}>
                   <h2>{slide[0].name}</h2>
                   <p dangerouslySetInnerHTML={{ __html: slide[0].description}}/>
                 </div>
                 <img onClick={event => beatClicked(event, slide[1])} onMouseEnter={event => playSound(event, new Howl({src: [slide[1].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} className={slide[1].showItem ? 'placeholder': 'card'} src={slide[1].image.url} alt="card"/>
+                <h2 className="click-to-view no-hover">Click to View</h2>
                 <div className={slide[1].showItem ? 'placeholder-text': 'info-text'}>
                   <h2>{slide[1].name}</h2>
                   <p dangerouslySetInnerHTML={{ __html: slide[1].description}}/>
                 </div>
                 <img onClick={event => beatClicked(event, slide[2])} onMouseEnter={event => playSound(event, new Howl({src: [slide[2].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} className={slide[2].showItem ? 'placeholder': 'card'} src={slide[2].image.url} alt="card"/>
+                <h2 className="click-to-view no-hover">Click to View</h2>
                 <div className={slide[2].showItem ? 'placeholder-text': 'info-text'}>
                   <h2>{slide[2].name}</h2>
                   <p dangerouslySetInnerHTML={{ __html: slide[2].description}}/>
