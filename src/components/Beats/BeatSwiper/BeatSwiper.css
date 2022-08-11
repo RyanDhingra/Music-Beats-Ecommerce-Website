@@ -37,7 +37,7 @@
    margin-left: 5px;
    margin-right: 5px;
    width: 260px;
-   background-color: red;
+   border: 1px solid white;
    color: white;
    padding-left: 5px;
    padding-right: 5px;
@@ -61,8 +61,8 @@ h2 {
    margin-top: 3px;
 }
 
-.click-to-view1 {
-   position: relative;
+.click-to-view {
+   position: absolute;
    top: 75px;
    left: 5px;
    color: white;
@@ -70,39 +70,17 @@ h2 {
    transition: opacity 0.5s;
 }
 
-.click-to-view2 {
-   position: relative;
-   top: 75px;
-   left: 5px;
-   color: white;
-   opacity: 0;
-   transition: opacity 0.5s;
-}
-
-.click-to-view3 {
-   position: relative;
-   top: 75px;
-   left: 5px;
-   color: white;
-   opacity: 0;
-   transition: opacity 0.5s;
-}
-
-.card:hover + .click-to-view1 {
-   opacity: 1;
-   transition: opacity 0.5s;
-}
-
-.card:hover + .click-to-view2 {
-   opacity: 1;
-   transition: opacity 0.5s;
-}
-
-.card:hover + .click-to-view3 {
+.card:hover + .click-to-view {
    opacity: 1;
    transition: opacity 0.5s;
 }
 
 .no-hover {
    pointer-events: none;
+}
+
+.card-container {
+   position: relative;
+   width: 200px;
+   height: 200px;
 }

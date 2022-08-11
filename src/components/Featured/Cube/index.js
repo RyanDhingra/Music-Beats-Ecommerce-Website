@@ -29,7 +29,7 @@ export default function Cube({featuredBeats}) {
         effect={"cube"}
         grabCursor={true}
         autoplay={{
-            delay: 2500,
+            delay: 1500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         }}

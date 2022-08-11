@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, #db111f 15%, #000 40%);
+    background: linear-gradient(90deg, #8F6101 15%, #000 40%);
     height: 80px;
     position: fixed;
     z-index: 99;
