@@ -1,6 +1,6 @@
 import React from "react";
 import './index.css'
-import contactBG from "../../assets/contactBG.mp4"
+import contactBG from "../../assets/contactBG.jpg"
 import emailjs from 'emailjs-com'
 import Form from './Form/index.js'
 import { useRef } from "react";
@@ -24,7 +24,7 @@ export default function Contact() {
 
     return (
             <div className="contact-section" id="contact">
-                <video className="contact-vid" src={contactBG} autoPlay loop muted/>
+                <img className="contact-vid" src={contactBG} alt="Contact Page"/>
                 <div className="form-container">
                     <Form/>
                     <form className="contact-form" ref={form} onSubmit={sendEmail}>

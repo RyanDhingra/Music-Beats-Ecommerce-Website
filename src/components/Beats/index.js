@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './index.css'
-import beatsBG from "../../assets/beatsBG.mp4"
+import beatsBG from "../../assets/beatsBG.jpg"
 import BeatSwiper from "./BeatSwiper/index.js"
 import { Howl, Howler } from "howler";
 import stop from '../../assets/stop.png'
@@ -58,7 +58,7 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
 
     return (
         <div className="beats-section" id="browse">
-            <video className="beats-vid" src={beatsBG} autoPlay loop muted/>
+            <img className="beats-vid" src={beatsBG} alt="Beats Page"/>
             <div className="beats-display">
                 <h1 className={returnData ? "beats-title inactive":"beats-title"}>Beats</h1>
                 <div className={returnData ? "beats-slider1 inactive":"beats-slider1"}>
