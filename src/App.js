@@ -16,6 +16,7 @@ function App() {
   const [beats1, setBeats1] = useState([]);
   const [beats2, setBeats2] = useState([]);
   const [featured, setFeatured] = useState([]);
+  const [adding, setAdding] = useState(false);
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
@@ -37,8 +38,16 @@ function App() {
       const item = await commerce.cart.add(productID, 1, option)
       setCart(item.cart)
       alert("Item successfully added to cart.")
+      setAdding(!adding)
     }
   }
+
+  useEffect(() => {
+    for (let x = 0; x < cart.line_items?.length; x++) {
+      commerce.cart.update(cart.line_items[x].id, { quantity: 1 })
+      fetchCart()
+    }
+  }, [cart.line_items])
 
   const fetchCart = async () => {
     const cart = await commerce.cart.retrieve()

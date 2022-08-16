@@ -3,7 +3,7 @@ import './index.css'
 import cartBG from '../../assets/cartBG.mp4'
 import Checkout from './Checkout/index.js'
 
-const Cart = ({ currCart, handleRemoveFromCart, handleEmptyCart, order, onCaptureCheckout, error }) => {
+const Cart = ({ currCart, handleRemoveFromCart, handleEmptyCart, order, onCaptureCheckout, error}) => {
     const [clicked, setClicked] = useState(false);
 
     const handleClick = () => {

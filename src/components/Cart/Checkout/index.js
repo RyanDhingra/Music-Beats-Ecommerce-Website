@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { commerce } from '../../../lib/index.js';
 import PaymentForm from './PaymentForm/index.js'
 
-const Checkout = ({ clicked, cart, order, onCaptureCheckout, error }) => {
+const Checkout = ({ clicked, cart, order, onCaptureCheckout, error}) => {
     const [checkoutToken, setCheckoutToken] = useState(null);
 
     useEffect(() => {
@@ -16,7 +16,6 @@ const Checkout = ({ clicked, cart, order, onCaptureCheckout, error }) => {
         }
         generateCheckoutToken();
     }, [cart]);
-    console.log(cart)
 
     return (
             <PaymentForm clicked={clicked} checkoutToken={checkoutToken} onCaptureCheckout={onCaptureCheckout} cart={cart}/>

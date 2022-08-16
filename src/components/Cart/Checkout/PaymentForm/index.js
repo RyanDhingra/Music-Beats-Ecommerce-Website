@@ -52,7 +52,6 @@ const PaymentForm = ({ clicked, checkoutToken, onCaptureCheckout, cart }) => {
                 event.target.reset()
                 cardElement.clear()
                 checkoutToken.live.line_items.clear()
-                console.log(checkoutToken)
             }
         }
     }

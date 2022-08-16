@@ -47,7 +47,6 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
         }
         setReturnData(!returnData);
     }
-    console.log(currBeat)
 
     const prices = {
         Exclusive: "$300",
