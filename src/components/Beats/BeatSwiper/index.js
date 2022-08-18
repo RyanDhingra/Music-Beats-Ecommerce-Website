@@ -6,7 +6,7 @@ import silence from '../../../assets/silence.mp3'
 
 export default function BeatSwiper({prod_list, viewBeat}) {
 
-  let sound = null;
+  var sound = null;
 
   const playSound = (event, curr_sound) => {
     Howler.volume(1.0)
