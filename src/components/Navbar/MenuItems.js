@@ -21,6 +21,6 @@ export const MenuItems = [
         title: "Cart",
         url: "cart",
         cName: 'nav-links',
-        offset: -4
+        offset: -3
     }
 ]
