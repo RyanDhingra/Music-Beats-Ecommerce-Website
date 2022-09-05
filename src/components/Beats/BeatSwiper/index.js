@@ -3,23 +3,26 @@ import "swiper/css";
 import "./BeatSwiper.css";
 import { Howl, Howler } from "howler";
 import silence from '../../../assets/silence.mp3'
+import { useEffect, useState } from "react";
 
 export default function BeatSwiper({prod_list, viewBeat}) {
 
-  var sound = null;
+  const [sound, setSound] = useState(new Howl({src: silence, html5: true}));
 
   const playSound = (event, curr_sound) => {
     Howler.volume(1.0)
-    sound = curr_sound;
-    sound.play();
+    setSound(curr_sound);
   }
 
-  const pauseSound = (event, curr_sound) => {
-    if (curr_sound) {
-      curr_sound.stop();
-      curr_sound.unload();
+  useEffect(() => { 
+    sound?.play()
+  }, [sound])
+
+  const pauseSound = (event) => {
+    sound.stop()
+    sound.unload()
+    setSound(null)
     }
-  }  
 
   const beatClicked = (event, beatToView) => {
     pauseSound(event, sound);
@@ -79,7 +82,7 @@ export default function BeatSwiper({prod_list, viewBeat}) {
             groupedProds.map((slide) => (
               <SwiperSlide className="beat-slide">
                 <div className="card-container">
-                  <img onClick={event => beatClicked(event, slide[0])} onMouseEnter={event => playSound(event, new Howl({src: [slide[0].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} className={slide[0].showItem ? 'placeholder': 'card'} src={slide[0].image.url} alt="card"/>
+                  <img onClick={event => beatClicked(event, slide[0])} onMouseEnter={event => playSound(event, new Howl({src: [slide[0].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event)} className={slide[0].showItem ? 'placeholder': 'card'} src={slide[0].image.url} alt="card"/>
                   <h2 className="click-to-view no-hover">Click to View</h2>
                 </div>
                 <div className={slide[0].showItem ? 'placeholder-text': 'info-text'}>
@@ -87,7 +90,7 @@ export default function BeatSwiper({prod_list, viewBeat}) {
                   <p dangerouslySetInnerHTML={{ __html: slide[0].description}}/>
                 </div>
                 <div className="card-container">
-                  <img onClick={event => beatClicked(event, slide[1])} onMouseEnter={event => playSound(event, new Howl({src: [slide[1].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} className={slide[1].showItem ? 'placeholder': 'card'} src={slide[1].image.url} alt="card"/>
+                  <img onClick={event => beatClicked(event, slide[1])} onMouseEnter={event => playSound(event, new Howl({src: [slide[1].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event)} className={slide[1].showItem ? 'placeholder': 'card'} src={slide[1].image.url} alt="card"/>
                   <h2 className="click-to-view no-hover">Click to View</h2>
                 </div>
                 <div className={slide[1].showItem ? 'placeholder-text': 'info-text'}>
@@ -95,7 +98,7 @@ export default function BeatSwiper({prod_list, viewBeat}) {
                   <p dangerouslySetInnerHTML={{ __html: slide[1].description}}/>
                 </div>
                 <div className="card-container">
-                  <img onClick={event => beatClicked(event, slide[2])} onMouseEnter={event => playSound(event, new Howl({src: [slide[2].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} className={slide[2].showItem ? 'placeholder': 'card'} src={slide[2].image.url} alt="card"/>
+                  <img onClick={event => beatClicked(event, slide[2])} onMouseEnter={event => playSound(event, new Howl({src: [slide[2].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event)} className={slide[2].showItem ? 'placeholder': 'card'} src={slide[2].image.url} alt="card"/>
                   <h2 className="click-to-view no-hover">Click to View</h2>
                 </div>
                 <div className={slide[2].showItem ? 'placeholder-text': 'info-text'}>
