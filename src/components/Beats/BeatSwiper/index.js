@@ -22,7 +22,7 @@ export default function BeatSwiper({prod_list, viewBeat}) {
     sound.stop()
     sound.unload()
     setSound(null)
-    }
+  }
 
   const beatClicked = (event, beatToView) => {
     pauseSound(event, sound);

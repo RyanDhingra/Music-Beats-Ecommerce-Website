@@ -5,23 +5,26 @@ import "swiper/css/pagination";
 import "./index.css";
 import { EffectCube, Pagination, Autoplay } from "swiper";
 import { Howler, Howl } from "howler";
+import { useState, useEffect } from "react";
 
 export default function Cube({featuredBeats}) {
 
-  let sound = null;
+  const [sound, setSound] = useState(null);
 
   const playSound = (event, curr_sound) => {
     Howler.volume(1.0)
-    sound = curr_sound;
-    sound.play();
+    setSound(curr_sound);
   }
 
-  const pauseSound = (event, curr_sound) => {
-    if (curr_sound) {
-      curr_sound.stop();
-      curr_sound.unload();
-    }
-  }  
+  useEffect(() => { 
+    sound?.play()
+  }, [sound])
+
+  const pauseSound = (event) => {
+    sound.stop()
+    sound.unload()
+    setSound(null)
+  }
 
   return (
     <>
@@ -44,19 +47,19 @@ export default function Cube({featuredBeats}) {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img className="cube-img" onMouseEnter={event => playSound(event, new Howl({src: [featuredBeats[0].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} src={featuredBeats[0] ? featuredBeats[0].image.url:'https://glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png'} alt="Track 1" />
+          <img className="cube-img" onMouseEnter={event => playSound(event, new Howl({src: [featuredBeats[0].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event)} src={featuredBeats[0] ? featuredBeats[0].image.url:'https://glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png'} alt="Track 1" />
           <h1 className="featured-beat-title">{featuredBeats[0] ? featuredBeats[0].name:"Beat 1"}</h1>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="cube-img" onMouseEnter={event => playSound(event, new Howl({src: [featuredBeats[1].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} src={featuredBeats[1] ? featuredBeats[1].image.url:'https://glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png'} alt="Track 2" />
+          <img className="cube-img" onMouseEnter={event => playSound(event, new Howl({src: [featuredBeats[1].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event)} src={featuredBeats[1] ? featuredBeats[1].image.url:'https://glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png'} alt="Track 2" />
           <h1 className="featured-beat-title">{featuredBeats[1] ? featuredBeats[1].name:"Beat 2"}</h1>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="cube-img" onMouseEnter={event => playSound(event, new Howl({src: [featuredBeats[2].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} src={featuredBeats[2] ? featuredBeats[2].image.url:'https://glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png'} alt="Track 3" />
+          <img className="cube-img" onMouseEnter={event => playSound(event, new Howl({src: [featuredBeats[2].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event)} src={featuredBeats[2] ? featuredBeats[2].image.url:'https://glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png'} alt="Track 3" />
           <h1 className="featured-beat-title">{featuredBeats[2] ? featuredBeats[2].name:"Beat 3"}</h1>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="cube-img" onMouseEnter={event => playSound(event, new Howl({src: [featuredBeats[3].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event, sound)} src={featuredBeats[3] ? featuredBeats[3].image.url:'https://glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png'} alt="Track 4" />
+          <img className="cube-img" onMouseEnter={event => playSound(event, new Howl({src: [featuredBeats[3].assets[0].url], html5: true}))} onMouseLeave={event => pauseSound(event)} src={featuredBeats[3] ? featuredBeats[3].image.url:'https://glyric.com/modules/custom/glyrics_custom/images/player_default_cover.png'} alt="Track 4" />
           <h1 className="featured-beat-title">{featuredBeats[3] ? featuredBeats[3].name:"Beat 4"}</h1>
         </SwiperSlide>
       </Swiper>
