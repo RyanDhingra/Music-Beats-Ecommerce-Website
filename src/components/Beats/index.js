@@ -57,7 +57,7 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
 
     return (
         <div className="beats-section" id="browse">
-            <img className="beats-vid" src={beatsBG} alt="Beats Page"/>
+            <img className="beats-bg" src={beatsBG} alt="Beats Page"/>
             <div className="beats-display">
                 <h1 className={returnData ? "beats-title inactive":"beats-title"}>Beats</h1>
                 <div className={returnData ? "beats-slider1 inactive":"beats-slider1"}>
@@ -73,6 +73,12 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
                     <BeatSwiper prod_list={kits} viewBeat={handleReturnData}/>
                 </div>
             </div>
+            <div className="looperman">
+                    <a href="https://www.looperman.com/users/loops/5747756" target='_blank' rel="noreferrer" style={{textDecoration: 'none'}}>
+                        <img className="looperman-img" src="https://i0.wp.com/djtechtools.com/wp-content/uploads/2012/05/looperman-logo.png?resize=200%2C200" alt="Looperman"/>
+                        <h2 style={{width: '200px', color: 'white'}}>View More</h2>
+                    </a>
+                </div>
             <div className={returnData ? "view-item":"view-item inactive"}>
                 <img className={returnData ? "view-image": "view-image inactive"} src={image} alt="Sound Cover"/>
                 <img className={returnData ? "play-button": "play-button inactive"} src='https://icon-library.com/images/video-play-icon-transparent/video-play-icon-transparent-5.jpg' alt="Play" onClick={returnData ? () => playSound(): null}/>

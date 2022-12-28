@@ -1,4 +1,4 @@
-.beats-vid{
+.beats-bg{
     position: absolute;
     width: 100%;
     height: 110vh;
@@ -247,4 +247,16 @@
 
 .variants.inactive {
     opacity: 0;
+}
+
+.looperman {
+    position: absolute;
+    right: 5.5%;
+    top: 20%;
+    width: 150px;
+}
+
+.looperman-img {
+    height: 150px;
+    width: 150px;
 }
