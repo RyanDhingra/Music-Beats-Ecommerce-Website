@@ -11,7 +11,8 @@
    top: 0px;
    left: 0px;
    right: 0px;
-   width: 90vw;
+   width: 100%;
+   margin-left: 5%;
 }
 
 .card {
