@@ -255,6 +255,13 @@
     text-align: center;
     left: 200px;
     top: 15px;
+    transition: opacity 1s;
+    transition-delay: 0.5s;
+}
+
+.looperman.inactive {
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .looperman-img {

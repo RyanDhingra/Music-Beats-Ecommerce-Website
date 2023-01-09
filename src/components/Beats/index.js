@@ -73,7 +73,7 @@ export default function Beats({ beats1, beats2, kits, onAddToCart }) {
                     <BeatSwiper prod_list={kits} viewBeat={handleReturnData}/>
                 </div>
             </div>
-            <div className="looperman">
+            <div className={returnData ? "looperman inactive":"looperman"}>
                     <a href="https://www.looperman.com/users/loops/5747756" target='_blank' rel="noreferrer" style={{textDecoration: 'none'}}>
                         <img className="looperman-img" src="https://i0.wp.com/djtechtools.com/wp-content/uploads/2012/05/looperman-logo.png?resize=200%2C200" alt="Looperman"/>
                     </a>
